@@ -1,3 +1,5 @@
+//This script is for testing Drag and Drop feature
+
 package Demo.assignment_MVN;
 
 import org.openqa.selenium.By;

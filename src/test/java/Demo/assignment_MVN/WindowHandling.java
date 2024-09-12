@@ -1,3 +1,5 @@
+//This script is for handling the windows
+
 package Demo.assignment_MVN;
 
 import org.openqa.selenium.By;

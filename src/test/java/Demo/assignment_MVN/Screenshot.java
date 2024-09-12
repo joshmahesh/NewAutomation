@@ -1,3 +1,4 @@
+//This script is for taking the screenshot before and after particular action
 package Demo.assignment_MVN;
 
 import org.openqa.selenium.By;

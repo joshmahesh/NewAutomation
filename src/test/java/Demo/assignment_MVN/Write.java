@@ -1,3 +1,4 @@
+//This script is for writing the data to the excel file
 package Demo.assignment_MVN;
 
 import java.io.FileOutputStream;

@@ -1,3 +1,4 @@
+//This script is to check the file upload feature
 package Demo.assignment_MVN;
 
 import org.openqa.selenium.By;
