@@ -1,3 +1,5 @@
+//This script is for testing Drag and Drop feature
+
 package Demo.assignment_MVN;
 
 import org.openqa.selenium.By;
@@ -24,6 +26,8 @@ public class DragAndDrop {
 	    @Test
 	    public void verifyDragAndDrop() {
 	        
+	    	try
+	    	{
 	    	driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
 	        driver.findElement(By.id("mainContainer"));
 	        
@@ -39,8 +43,14 @@ public class DragAndDrop {
 	        
 	        Assert.assertEquals(actualColor, expectedColor);
 	        
-	        //Testing comment for Gitbb
-
+	    	}
+	    	
+	    	catch (Exception e) {
+	                
+	                System.err.println("An error occurred during the drag-and-drop test: " + e.getMessage());
+	                e.printStackTrace();
+	                Assert.fail("Test failed due to an exception: " + e.getMessage());
+	            }
 	    }
 	    @AfterMethod
 	    public void close() {

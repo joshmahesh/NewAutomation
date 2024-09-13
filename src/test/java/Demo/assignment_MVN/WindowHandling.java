@@ -1,3 +1,5 @@
+//This script is for handling the windows
+
 package Demo.assignment_MVN;
 
 import org.openqa.selenium.By;
@@ -24,6 +26,8 @@ public class WindowHandling {
 
     @Test
     public void switching() throws InterruptedException {
+    	try
+    	{
         driver.findElement(By.linkText("Click Here")).click();
 
         
@@ -41,7 +45,12 @@ public class WindowHandling {
         String basePageTitle = driver.getTitle();
         Assert.assertEquals(basePageTitle, "The Internet");
     }
-
+    catch(Exception e)
+    {
+ 	   System.err.println("An error occurred during the drag-and-drop test: " + e.getMessage());
+          e.printStackTrace();
+          Assert.fail("Test failed due to an exception: " + e.getMessage());   
+    }}
     @AfterClass
     public void quit() {
         driver.quit();

@@ -1,3 +1,4 @@
+//This script is for checking the data from the excel file
 package Demo.assignment_MVN;
 
 import org.openqa.selenium.By;
@@ -26,46 +27,53 @@ public class Table {
 
 	    @Test
 	    public void verifyContent() {
-	        
-	        List<List<String>> expectedResult = new ArrayList<>();
-	        
-	        expectedResult.add(List.of("","Functional", "QTP", "Bugzilla",""));
-	        expectedResult.add(List.of("","GUI", "Selenium", "TFS",""));
-	        expectedResult.add(List.of("","Performance", "Coded UI", "QC ALM",""));
-	        
-	        List<List<String>> actualResult = extractTableData();
-	        
-	        Assert.assertEquals(actualResult, expectedResult, "Expected and Actual Table data does not match.");
+	        try {
+	            List<List<String>> expectedResult = new ArrayList<>();
+	            
+	            expectedResult.add(List.of("", "Functional", "QTP", "Bugzilla", ""));
+	            expectedResult.add(List.of("", "GUI", "Selenium", "TFS", ""));
+	            expectedResult.add(List.of("", "Performance", "Coded UI", "QC ALM", ""));
+	            
+	            List<List<String>> actualResult = extractTableData();
+	            
+	            Assert.assertEquals(actualResult, expectedResult, "Expected and Actual Table data does not match.");
+	        } catch (Exception e) {
+	        	System.err.println("An error occurred during the drag-and-drop test: " + e.getMessage());
+	             e.printStackTrace();
+	             Assert.fail("Test failed due to an exception: " + e.getMessage()); 
+	        }
 	    }
 
 	    private List<List<String>> extractTableData() {
 	        List<List<String>> tableData = new ArrayList<>();
 	        
-	        WebElement table = driver.findElement(By.id("table01"));
-	        
-	        List<WebElement> rows = table.findElements(By.tagName("tr"));
+	        try {
+	            WebElement table = driver.findElement(By.id("table01"));
+	            
+	            List<WebElement> rows = table.findElements(By.tagName("tr"));
 
-	        for (int i = 0; i < rows.size(); i++) {
-		        WebElement row = rows.get(i); 
-		        List<WebElement> cells = row.findElements(By.tagName("td"));
-		        List<String> rowData = new ArrayList<>(); 
+	            for (int i = 0; i < rows.size(); i++) {
+	                WebElement row = rows.get(i); 
+	                List<WebElement> cells = row.findElements(By.tagName("td"));
+	                List<String> rowData = new ArrayList<>();
 
-		        
-		        for (int j = 0; j < cells.size(); j++) {
-		            WebElement cell = cells.get(j);
-		            rowData.add(cell.getText().trim()); 
-		        }
+	                for (int j = 0; j < cells.size(); j++) {
+	                    WebElement cell = cells.get(j);
+	                    rowData.add(cell.getText().trim());
+	                }
 
-		        
-		        if (!rowData.isEmpty()) {
-		            tableData.add(rowData);
-		        }
-		    }
+	                if (!rowData.isEmpty()) {
+	                    tableData.add(rowData);
+	                }
+	            }
+	        } catch (Exception e) {
+	        	System.err.println("An error occurred during the drag-and-drop test: " + e.getMessage());
+	             e.printStackTrace();
+	             Assert.fail("Test failed due to an exception: " + e.getMessage()); 
+	        }
 
-		    return tableData;
-		    }
-	    
-	   @AfterClass
+	        return tableData;
+	    }	   @AfterClass
 	    public void quit() {
 	        driver.quit();
 	    }

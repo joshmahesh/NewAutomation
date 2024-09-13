@@ -1,25 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-09T12:31:16 IST" name="Default suite" finished-at="2024-09-09T12:31:20 IST" duration-ms="4256">
+  <suite started-at="2024-09-12T18:20:33 IST" name="Suite" finished-at="2024-09-12T18:20:52 IST" duration-ms="19575">
     <groups>
     </groups>
-    <test started-at="2024-09-09T12:31:16 IST" name="Default test" finished-at="2024-09-09T12:31:20 IST" duration-ms="4256">
-      <class name="Demo.assignment_MVN.IFrames">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Demo.assignment_MVN.IFrames@217ed35e]" started-at="2024-09-09T12:31:16 IST" name="setUp" finished-at="2024-09-09T12:31:20 IST" duration-ms="3725" status="PASS">
+    <test started-at="2024-09-12T18:20:33 IST" name="Test" finished-at="2024-09-12T18:20:52 IST" duration-ms="19575">
+      <class name="Demo.assignment_MVN.WindowHandling">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Demo.assignment_MVN.WindowHandling@62ddbd7e]" started-at="2024-09-12T18:20:42 IST" name="setUp" finished-at="2024-09-12T18:20:45 IST" duration-ms="3425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="switching()[pri:0, instance:Demo.assignment_MVN.IFrames@217ed35e]" started-at="2024-09-09T12:31:20 IST" name="switching" finished-at="2024-09-09T12:31:20 IST" duration-ms="254" status="PASS">
+        <test-method signature="switching()[pri:0, instance:Demo.assignment_MVN.WindowHandling@62ddbd7e]" started-at="2024-09-12T18:20:45 IST" name="switching" finished-at="2024-09-12T18:20:46 IST" duration-ms="358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- switching -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:Demo.assignment_MVN.IFrames@217ed35e]" started-at="2024-09-09T12:31:20 IST" name="quit" finished-at="2024-09-09T12:31:20 IST" duration-ms="220" status="PASS">
+        <test-method is-config="true" signature="quit()[pri:0, instance:Demo.assignment_MVN.WindowHandling@62ddbd7e]" started-at="2024-09-12T18:20:46 IST" name="quit" finished-at="2024-09-12T18:20:46 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- Demo.assignment_MVN.WindowHandling -->
+      <class name="Demo.assignment_MVN.DragAndDrop">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Demo.assignment_MVN.DragAndDrop@74e52ef6]" started-at="2024-09-12T18:20:46 IST" name="setUp" finished-at="2024-09-12T18:20:47 IST" duration-ms="702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDragAndDrop()[pri:0, instance:Demo.assignment_MVN.DragAndDrop@74e52ef6]" started-at="2024-09-12T18:20:47 IST" name="verifyDragAndDrop" finished-at="2024-09-12T18:20:49 IST" duration-ms="2710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDragAndDrop -->
+        <test-method is-config="true" signature="close()[pri:0, instance:Demo.assignment_MVN.DragAndDrop@74e52ef6]" started-at="2024-09-12T18:20:49 IST" name="close" finished-at="2024-09-12T18:20:49 IST" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- Demo.assignment_MVN.DragAndDrop -->
+      <class name="Demo.assignment_MVN.IFrames">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Demo.assignment_MVN.IFrames@6ed3ccb2]" started-at="2024-09-12T18:20:49 IST" name="setUp" finished-at="2024-09-12T18:20:52 IST" duration-ms="2458" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="switching()[pri:0, instance:Demo.assignment_MVN.IFrames@6ed3ccb2]" started-at="2024-09-12T18:20:52 IST" name="switching" finished-at="2024-09-12T18:20:52 IST" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- switching -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:Demo.assignment_MVN.IFrames@6ed3ccb2]" started-at="2024-09-12T18:20:52 IST" name="quit" finished-at="2024-09-12T18:20:52 IST" duration-ms="124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- Demo.assignment_MVN.IFrames -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="Demo.assignment_MVN.FileUpload">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Demo.assignment_MVN.FileUpload@7eac9008]" started-at="2024-09-12T18:20:37 IST" name="setUp" finished-at="2024-09-12T18:20:40 IST" duration-ms="3189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyUpload()[pri:0, instance:Demo.assignment_MVN.FileUpload@7eac9008]" started-at="2024-09-12T18:20:40 IST" name="verifyUpload" finished-at="2024-09-12T18:20:40 IST" duration-ms="413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpload -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:Demo.assignment_MVN.FileUpload@7eac9008]" started-at="2024-09-12T18:20:40 IST" name="quit" finished-at="2024-09-12T18:20:41 IST" duration-ms="129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- Demo.assignment_MVN.FileUpload -->
+      <class name="Demo.assignment_MVN.Table">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Demo.assignment_MVN.Table@4116aac9]" started-at="2024-09-12T18:20:41 IST" name="setUp" finished-at="2024-09-12T18:20:42 IST" duration-ms="1070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyContent()[pri:0, instance:Demo.assignment_MVN.Table@4116aac9]" started-at="2024-09-12T18:20:42 IST" name="verifyContent" finished-at="2024-09-12T18:20:42 IST" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContent -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:Demo.assignment_MVN.Table@4116aac9]" started-at="2024-09-12T18:20:42 IST" name="quit" finished-at="2024-09-12T18:20:42 IST" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- Demo.assignment_MVN.Table -->
+      <class name="Demo.assignment_MVN.Screenshot">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Demo.assignment_MVN.Screenshot@6f03482]" started-at="2024-09-12T18:20:33 IST" name="setUp" finished-at="2024-09-12T18:20:35 IST" duration-ms="2545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testFormSubmission()[pri:0, instance:Demo.assignment_MVN.Screenshot@6f03482]" started-at="2024-09-12T18:20:35 IST" name="testFormSubmission" finished-at="2024-09-12T18:20:37 IST" duration-ms="1504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormSubmission -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Demo.assignment_MVN.Screenshot@6f03482]" started-at="2024-09-12T18:20:37 IST" name="tearDown" finished-at="2024-09-12T18:20:37 IST" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Demo.assignment_MVN.Screenshot -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

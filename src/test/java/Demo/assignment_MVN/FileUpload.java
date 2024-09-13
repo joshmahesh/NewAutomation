@@ -1,3 +1,4 @@
+//This script is to check the file upload feature
 package Demo.assignment_MVN;
 
 import org.openqa.selenium.By;
@@ -23,6 +24,8 @@ public class FileUpload {
 	    @Test
 	    public void verifyUpload() {
 	        
+	    	try 
+	    	{
 	       driver.findElement(By.name("file")).sendKeys("C:\\Users\\Mahesh\\Selenium\\Assignment_MVN\\Excel.xlsx");
 	       driver.findElement(By.id("file-submit")).click();
 	       
@@ -32,7 +35,13 @@ public class FileUpload {
 	       
 	       Assert.assertEquals(actualText, expText);
 	    }
-
+        catch(Exception e)
+	    	{
+        	 System.err.println("An error occurred during the drag-and-drop test: " + e.getMessage());
+             e.printStackTrace();
+             Assert.fail("Test failed due to an exception: " + e.getMessage());
+	    	}
+	    	}
 	   @AfterClass
 	    public void quit() {
 	        driver.quit();
