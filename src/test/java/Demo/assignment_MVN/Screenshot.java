@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -32,7 +33,8 @@ public class Screenshot {
 
 	    @Test
 	    public void testFormSubmission() throws IOException {
-	        // Locate form elements
+	       try
+	       {
 	    	
 	    	 File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		     FileUtils.copyFile(screenshotFile,new File(".\\Screenshots\\BeforeFillingData.png"));
@@ -48,7 +50,13 @@ public class Screenshot {
 	        FileUtils.copyFile(screenshotFile1,new File(".\\Screenshots\\AfterFillingData.png"));
 	            
 	    }
-
+	       catch(Exception e)
+	       {
+	    	   System.err.println("An error occurred during the drag-and-drop test: " + e.getMessage());
+	             e.printStackTrace();
+	             Assert.fail("Test failed due to an exception: " + e.getMessage());   
+	       }
+	       }
 	    @AfterClass
 	    public void tearDown() {
 	        // Close the browser
